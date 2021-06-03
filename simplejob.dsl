@@ -11,7 +11,7 @@ job("firstDSLJob"){
       shell('java -jar target/*.jar')
       dockerBuildAndPublish {
       	repositoryName("harshrai3112/mvnprojdsl")
-	tag('v1')
+	
 	registryCredentials('0a330222-582d-430f-a6ef-79d063fe4555')
 	 forcePull(false)
       }
