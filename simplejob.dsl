@@ -12,7 +12,7 @@ job("firstDSLJob"){
       dockerBuildAndPublish {
       	repositoryName("harshrai3112/mvnprojDSL")
 	tag('v1')
-	registryCredentials('harshrai3112')
+	registryCredentials('harshrai3112/')
       }
  }
  publishers{
