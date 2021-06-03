@@ -9,6 +9,11 @@ job("firstDSLJob"){
       	mavenInstallation('mvn3')
       }
       shell('java -jar target/*.jar')
+      dockerBuildAndPublish {
+      	repositoryName("harshrai3112/mvnprojDSL")
+	tag('v1')
+	registryCredentials('harshrai3112')
+      }
  }
  publishers{
  	archiveArtifacts('target/*.jar')
