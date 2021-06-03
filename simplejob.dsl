@@ -8,6 +8,7 @@ job("firstDSLJob"){
         goals('package')
       	mavenInstallation('mvn3')
       }
+      shell('java -jar target/*.jar')
  }
  publishers{
  	archiveArtifacts('target/*.jar')
